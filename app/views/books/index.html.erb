@@ -1,19 +1,20 @@
 <div class="container px-5 px-sm-0">
+
   <!--エラー文-->
   <% if @book_new.errors.any? %>
-      <div id="error_explanation">
-        <h3><%= pluralize(@book_new.errors.count, "error") %> prohibited this obj from being saved:</h3>
-        <ul>
-        <% @book_new.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-      <% end %>
-      
+  <div id="error_explanation">
+    <h3><%= pluralize(@book_new.errors.count, "error") %> prohibited this obj from being saved:</h3>
+    <ul>
+    <% @book_new.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
   <div class="row">
 
-    <%= render "books/list", user:@user, book_new:@book_new %>
+    <%= render "books/list", user:current_user, book_new:@book_new %>
 
     <div class="col-md-8 offset-md-1">
       <h2>Books</h2>
