@@ -17,3 +17,19 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+.field, .actions {
+  margin-bottom: 10px;
+}
+
+.form_group {
+  margin-bottom: 16px;
+}
+
+#notice {
+  color: green;
+}
+
+#error_explanation {
+  color: red;
+}
