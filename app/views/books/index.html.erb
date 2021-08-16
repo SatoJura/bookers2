@@ -1,10 +1,10 @@
 <div class="container px-5 px-sm-0">
   <!--エラー文-->
-  <% if @book.errors.any? %>
+  <% if @book_new.errors.any? %>
       <div id="error_explanation">
-        <h3><%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:</h3>
+        <h3><%= pluralize(@book_new.errors.count, "error") %> prohibited this obj from being saved:</h3>
         <ul>
-        <% @book.errors.full_messages.each do |msg| %>
+        <% @book_new.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
         </ul>
@@ -13,7 +13,7 @@
       
   <div class="row">
 
-    <%= render "books/list", book:@book, book_new:@book_new %>
+    <%= render "books/list", user:@user, book_new:@book_new %>
 
     <div class="col-md-8 offset-md-1">
       <h2>Books</h2>
